@@ -34,16 +34,20 @@ class BinaryIndexedTree:
         return res
 
     def search(self, x):
-    # 二分探索。和がx以上となる最小のインデックス(>= 1)を返す
+        """
+        二分探索。和がx以上となる最小のインデックス(>= 1)を返す
+        :param int x:
+        :return :
+        """
         i = 0
         s = 0
-        step = 1 << self.size.bit_length() - 1
+        step = 1 << (self.size.bit_length() - 1)
         while step:
-            if i + step <= self.size and s + self.bit[i + step] < x:
+            if i + step <= self.size and s + self.bit[i + step - 1] < x:
                 i += step
-                s += self.bit[i]
+                s += self.bit[i - 1]
             step >>= 1
-        return i + 1
+        return i
 
     def __len__(self):
         return self.size
