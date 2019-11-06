@@ -39,7 +39,7 @@ class BinaryIndexedTree:
         :param int x:
         :return :
         """
-        i = 0
+        i = 1
         s = 0
         step = 1 << (self.size.bit_length() - 1)
         while step:
