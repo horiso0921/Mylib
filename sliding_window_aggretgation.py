@@ -26,7 +26,7 @@ class SlidingWindowAggregation:
             print("AssertionError :", err)
 
     def push(self, x):
-        if not self.back_stack():
+        if not self.back_stack:
             self.back_stack.append((x, x))
         else:
             tmp = f(self.back_stack[-1][1], x)
