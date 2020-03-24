@@ -41,7 +41,8 @@ class SlidingWindowAggregation:
                 while self.back_stack:
                     x, fx = self.back_stack.pop()
                     fx = self.f(x, self.front_stack[-1][1])
-                    self.front_stack.append()
+                    self.front_stack.append((x, fx))
+            self.front_stack.pop()
 
         except AssertionError as err:
             print("AssertionError :", err)

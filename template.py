@@ -11,8 +11,8 @@ def LF(): return list(map(float, input().split()))
 def LI_(): return list(map(lambda x: int(x)-1, input().split()))
 def II(): return int(input())
 def IF(): return float(input())
-def LS(): return list(map(list, input().split()))
-def S(): return list(input().rstrip())
+def S(): return input().rstrip()
+def LS(): return S().split()))
 def IR(n): return [II() for _ in range(n)]
 def LIR(n): return [LI() for _ in range(n)]
 def FR(n): return [IF() for _ in range(n)]
@@ -21,40 +21,13 @@ def LIR_(n): return [LI_() for _ in range(n)]
 def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 mod = 1000000007
-inf = float('INF')
+inf = 1e10
 
-#A
-def A():
+#solve
+def solve():
     return
 
-#B
-def B():
-    return
 
-#C
-def C():
-    return
-
-#D
-def D():
-    return
-
-#E
-def E():
-    return
-
-#F
-def F():
-    return
-
-#G
-def G():
-    return
-
-#H
-def H():
-    return
-
-#Solve
+#main
 if __name__ == '__main__':
-    A()
+    solve()
