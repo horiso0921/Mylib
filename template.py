@@ -12,7 +12,7 @@ def LI_(): return list(map(lambda x: int(x)-1, input().split()))
 def II(): return int(input())
 def IF(): return float(input())
 def S(): return input().rstrip()
-def LS(): return S().split()))
+def LS(): return S().split()
 def IR(n): return [II() for _ in range(n)]
 def LIR(n): return [LI() for _ in range(n)]
 def FR(n): return [IF() for _ in range(n)]
