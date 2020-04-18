@@ -52,11 +52,3 @@ class BinaryIndexedTree:
 
     def __len__(self):
         return self.size
-
-if __name__ == "__main__":
-    bit = BinaryIndexedTree(100)
-    # bit.add(1, 1)
-    bit.add(4, 1)
-    bit.add(2, 1)
-    print(bit.bit[60:70])
-    print(bit.search(0))
