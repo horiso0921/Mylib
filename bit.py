@@ -39,11 +39,12 @@ class BinaryIndexedTree:
         :param int x:
         :return :
         """
-        i = 1
+        i = 0
         s = 0
-        step = 1 << (self.size.bit_length() - 1)
+        step = 1 << self.size.bit_length()
         while step:
             if i + step <= self.size and s + self.bit[i + step - 1] < x:
+                print(self.bit[i + step - 1], i, step)
                 i += step
                 s += self.bit[i - 1]
             step >>= 1
@@ -51,3 +52,11 @@ class BinaryIndexedTree:
 
     def __len__(self):
         return self.size
+
+if __name__ == "__main__":
+    bit = BinaryIndexedTree(100)
+    # bit.add(1, 1)
+    bit.add(4, 1)
+    bit.add(2, 1)
+    print(bit.bit[60:70])
+    print(bit.search(0))
